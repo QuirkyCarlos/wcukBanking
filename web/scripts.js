@@ -52,7 +52,7 @@ window.addEventListener('message', function(event) {
 										<span id="playerName"></span> <span id="avatar">${avatar}</span>
 									</span>
 									<div style="font-size: 14px; margin-top: -12px; font-weight: 500; position: absolute; right: 7.2%;">
-										<span>Wallet: <span id="wallet_money"></span> EUR</span>
+										<span>Wallet: <span id="wallet_money"></span> GB</span>
 									</div>
 								</div>
 							</div>
@@ -116,7 +116,7 @@ window.addEventListener('message', function(event) {
 								From <span style="color: #1f5eff; font-weight: 600;">${db.sender_name}</span>
 								<div style="margin-top: -5px;">Received</div>
 							</td>`;
-					amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} EUR</span> </td>`;
+					amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} GB</span> </td>`;
 				// Sent
 				} else if (db.type == 'transfer' && db.sender_identifier == event.data.identifier) {
 					icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 10px 15px 10px 15px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>';
@@ -124,7 +124,7 @@ window.addEventListener('message', function(event) {
 								To <span style="color: #1f5eff; font-weight: 600;">${db.receiver_name}</span>
 								<div style="margin-top: -5px;">Sent</div>
 							</td>`;
-					amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} EUR</span> </td>`;
+					amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} GB</span> </td>`;
 				// Deposited
 				} else if (db.type == 'deposit') {
 					icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 10px 15px 10px 15px; border-radius: 10px;"><i class="bi bi-download"></i></span></td>';
@@ -132,7 +132,7 @@ window.addEventListener('message', function(event) {
 								Into <span style="color: #1f5eff; font-weight: 600;">${db.receiver_name}</span>
 								<div style="margin-top: -5px;">Deposited</div>
 							</td>`;
-					amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} EUR</span> </td>`;
+					amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} GB</span> </td>`;
 				// Withdrawn
 				} else if (db.type == 'withdraw') {
 					icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 10px 15px 10px 15px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>';
@@ -140,7 +140,7 @@ window.addEventListener('message', function(event) {
 								From <span style="color: #1f5eff; font-weight: 600;">${db.sender_name}</span>
 								<div style="margin-top: -5px;">Withdrawn</div>
 							</td>`;
-					amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} EUR</span> </td>`;
+					amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} GB</span> </td>`;
 				}
 
 				row += `
@@ -199,7 +199,7 @@ window.addEventListener('message', function(event) {
 								<div style="margin-top: -5px;">Sent</div>
 							</td>
 							<td class="align-middle" style="font-weight: 500;">28 Aug 04:43</td>
-							<td class="align-middle" style="font-weight: 500;">- 732 500 EUR</td>
+							<td class="align-middle" style="font-weight: 500;">- 732 500 GB</td>
 						</tr>
 						<tr>
 							<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>
@@ -208,7 +208,7 @@ window.addEventListener('message', function(event) {
 								<div style="margin-top: -5px;">Deposited</div>
 							</td>
 							<td class="align-middle" style="font-weight: 500;">28 Aug 04:43</td>
-							<td class="align-middle" style="font-weight: 500; color: #2ecc71;">+ 57 000 EUR</td>
+							<td class="align-middle" style="font-weight: 500; color: #2ecc71;">+ 57 000 GB</td>
 						</tr>
 					</tbody>
 				</table>
@@ -262,7 +262,7 @@ window.addEventListener('message', function(event) {
 								From <span style="color: #1f5eff; font-weight: 600;">${db.sender_name}</span>
 								<div style="margin-top: -5px;">Received</div>
 							</td>`;
-					amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} EUR</span> </td>`;
+					amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} GB</span> </td>`;
 				// Sent
 				} else if (db.type == 'transfer' && db.sender_identifier == event.data.identifier) {
 					icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 10px 15px 10px 15px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>';
@@ -270,7 +270,7 @@ window.addEventListener('message', function(event) {
 								To <span style="color: #1f5eff; font-weight: 600;">${db.receiver_name}</span>
 								<div style="margin-top: -5px;">Sent</div>
 							</td>`;
-					amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} EUR</span> </td>`;
+					amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} GB</span> </td>`;
 				// Deposited
 				} else if (db.type == 'deposit') {
 					icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 10px 15px 10px 15px; border-radius: 10px;"><i class="bi bi-download"></i></span></td>';
@@ -278,7 +278,7 @@ window.addEventListener('message', function(event) {
 								Into <span style="color: #1f5eff; font-weight: 600;">${db.receiver_name}</span>
 								<div style="margin-top: -5px;">Deposited</div>
 							</td>`;
-					amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} EUR</span> </td>`;
+					amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} GB</span> </td>`;
 				// Withdrawn
 				} else if (db.type == 'withdraw') {
 					icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 10px 15px 10px 15px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>';
@@ -286,7 +286,7 @@ window.addEventListener('message', function(event) {
 								From <span style="color: #1f5eff; font-weight: 600;">${db.sender_name}</span>
 								<div style="margin-top: -5px;">Withdrawn</div>
 							</td>`;
-					amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} EUR</span> </td>`;
+					amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} GB</span> </td>`;
 				}
 
 				row += `
@@ -345,7 +345,7 @@ window.addEventListener('message', function(event) {
 								<div style="margin-top: -5px;">Sent</div>
 							</td>
 							<td class="align-middle" style="font-weight: 500;">28 Aug 04:43</td>
-							<td class="align-middle" style="font-weight: 500;">- 732 500 EUR</td>
+							<td class="align-middle" style="font-weight: 500;">- 732 500 GB</td>
 						</tr>
 						<tr>
 							<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>
@@ -354,7 +354,7 @@ window.addEventListener('message', function(event) {
 								<div style="margin-top: -5px;">Deposited</div>
 							</td>
 							<td class="align-middle" style="font-weight: 500;">28 Aug 04:43</td>
-							<td class="align-middle" style="font-weight: 500; color: #2ecc71;">+ 57 000 EUR</td>
+							<td class="align-middle" style="font-weight: 500; color: #2ecc71;">+ 57 000 GB</td>
 						</tr>
 					</tbody>
 				</table>
@@ -672,7 +672,7 @@ function overview_page_function(event) {
 											To <span style="color: #1f5eff;">Arthur James</span>
 											<div style="margin-top: -5px;">Sent</div>
 										</td>
-										<td class="align-middle" style="font-weight: 500;"><span> - 732 500 EUR</span> </td>
+										<td class="align-middle" style="font-weight: 500;"><span> - 732 500 GB</span> </td>
 									</tr>
 									<tr>
 										<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>
@@ -680,7 +680,7 @@ function overview_page_function(event) {
 											From <span style="color: #1f5eff;">Arthur James</span>
 											<div style="margin-top: -5px;">Received</div>
 										</td>
-										<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71;">+ 12 750 EUR</span> </td>
+										<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71;">+ 12 750 GB</span> </td>
 									</tr>
 									<tr>
 										<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-download"></i></span></td>
@@ -688,7 +688,7 @@ function overview_page_function(event) {
 											From <span style="color: #1f5eff;">Bank Account</span>
 											<div style="margin-top: -5px;">Withdrawn</div>
 										</td>
-										<td class="align-middle" style="font-weight: 500;"><span>- 7 000 EUR</span> </td>
+										<td class="align-middle" style="font-weight: 500;"><span>- 7 000 GB</span> </td>
 									</tr>
 									<tr>
 										<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>
@@ -696,7 +696,7 @@ function overview_page_function(event) {
 											Into <span style="color: #1f5eff;">Bank Account</span>
 											<div style="margin-top: -5px;">Deposited</div>
 										</td>
-										<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71;">+ 57 000 EUR</span> </td>
+										<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71;">+ 57 000 GB</span> </td>
 									</tr>
 								</tbody>
 							</table>
@@ -730,7 +730,7 @@ function overview_page_function(event) {
 							</div>
 						</div>
 						<hr>
-						<p class="card-text text-center" style="font-size: 20px;"><span style="color: #fff;">Balance:</span> <span id="playerBankMoney"></span> EUR</p>
+						<p class="card-text text-center" style="font-size: 20px;"><span style="color: #fff;">Balance:</span> <span id="playerBankMoney"></span> GB</p>
 						<p class="card-text text-center" style="font-size: 20px;"><span style="color: #fff;">IBAN:</span> <span id="playerIBAN">OK182716</span></p>
 					</div>
 				</div>
@@ -787,7 +787,7 @@ function overview_page_function(event) {
 						From <span style="color: #1f5eff; font-weight: 600;">${db.sender_name}</span>
 						<div style="margin-top: -5px;">Received</div>
 					</td>`;
-			amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} EUR</span> </td>`;
+			amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} GB</span> </td>`;
 		// Sent
 		} else if (db.type == 'transfer' && db.sender_identifier == event.data.identifier) {
 			icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>';
@@ -795,7 +795,7 @@ function overview_page_function(event) {
 						To <span style="color: #1f5eff; font-weight: 600;">${db.receiver_name}</span>
 						<div style="margin-top: -5px;">Sent</div>
 					</td>`;
-			amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} EUR</span> </td>`;
+			amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} GB</span> </td>`;
 		// Deposited
 		} else if (db.type == 'deposit') {
 			icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-download"></i></span></td>';
@@ -803,7 +803,7 @@ function overview_page_function(event) {
 						Into <span style="color: #1f5eff; font-weight: 600;">${db.receiver_name}</span>
 						<div style="margin-top: -5px;">Deposited</div>
 					</td>`;
-			amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} EUR</span> </td>`;
+			amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} GB</span> </td>`;
 		// Withdrawn
 		} else if (db.type == 'withdraw') {
 			icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>';
@@ -811,7 +811,7 @@ function overview_page_function(event) {
 						From <span style="color: #1f5eff; font-weight: 600;">${db.sender_name}</span>
 						<div style="margin-top: -5px;">Withdrawn</div>
 					</td>`;
-			amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} EUR</span> </td>`;
+			amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} GB</span> </td>`;
 		}
 
 		row += `
@@ -954,7 +954,7 @@ function society_page_function(event) {
 											To <span style="color: #1f5eff;">Arthur James</span>
 											<div style="margin-top: -5px;">Sent</div>
 										</td>
-										<td class="align-middle" style="font-weight: 500;"><span> - 732 500 EUR</span> </td>
+										<td class="align-middle" style="font-weight: 500;"><span> - 732 500 GB</span> </td>
 									</tr>
 									<tr>
 										<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>
@@ -962,7 +962,7 @@ function society_page_function(event) {
 											From <span style="color: #1f5eff;">Arthur James</span>
 											<div style="margin-top: -5px;">Received</div>
 										</td>
-										<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71;">+ 12 750 EUR</span> </td>
+										<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71;">+ 12 750 GB</span> </td>
 									</tr>
 									<tr>
 										<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-download"></i></span></td>
@@ -970,7 +970,7 @@ function society_page_function(event) {
 											From <span style="color: #1f5eff;">Bank Account</span>
 											<div style="margin-top: -5px;">Withdrawn</div>
 										</td>
-										<td class="align-middle" style="font-weight: 500;"><span>- 7 000 EUR</span> </td>
+										<td class="align-middle" style="font-weight: 500;"><span>- 7 000 GB</span> </td>
 									</tr>
 									<tr>
 										<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>
@@ -978,7 +978,7 @@ function society_page_function(event) {
 											Into <span style="color: #1f5eff;">Bank Account</span>
 											<div style="margin-top: -5px;">Deposited</div>
 										</td>
-										<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71;">+ 57 000 EUR</span> </td>
+										<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71;">+ 57 000 GB</span> </td>
 									</tr>
 								</tbody>
 							</table>
@@ -1012,7 +1012,7 @@ function society_page_function(event) {
 							</div>
 						</div>
 						<hr>
-						<p class="card-text text-center" style="font-size: 20px;"><span style="color: #fff;">Balance:</span> <span id="playerBankMoney"></span> EUR</p>
+						<p class="card-text text-center" style="font-size: 20px;"><span style="color: #fff;">Balance:</span> <span id="playerBankMoney"></span> GB</p>
 						<p class="card-text text-center" style="font-size: 20px;"><span style="color: #fff;">IBAN:</span> <span id="playerIBAN">OK182716</span></p>
 					</div>
 				</div>
@@ -1068,7 +1068,7 @@ function society_page_function(event) {
 						From <span style="color: #1f5eff; font-weight: 600;">${db.sender_name}</span>
 						<div style="margin-top: -5px;">Received</div>
 					</td>`;
-			amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} EUR</span> </td>`;
+			amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} GB</span> </td>`;
 		// Sent
 		} else if (db.type == 'transfer' && db.sender_identifier == event.data.societyInfo.society) {
 			icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>';
@@ -1076,7 +1076,7 @@ function society_page_function(event) {
 						To <span style="color: #1f5eff; font-weight: 600;">${db.receiver_name}</span>
 						<div style="margin-top: -5px;">Sent</div>
 					</td>`;
-			amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} EUR</span> </td>`;
+			amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} GB</span> </td>`;
 		// Deposited
 		} else if (db.type == 'deposit') {
 			icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-download"></i></span></td>';
@@ -1084,7 +1084,7 @@ function society_page_function(event) {
 						Into <span style="color: #1f5eff; font-weight: 600;">${db.receiver_name}</span>
 						<div style="margin-top: -5px;">Deposited</div>
 					</td>`;
-			amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} EUR</span> </td>`;
+			amount = `<td class="align-middle" style="font-weight: 500;"><span style="color: #2ecc71; float: right;">+ ${db.value.toLocaleString()} GB</span> </td>`;
 		// Withdrawn
 		} else if (db.type == 'withdraw') {
 			icon = '<td class="align-middle"><span style="background-color: #1d1e24; padding: 5px 10px 5px 10px; border-radius: 10px;"><i class="bi bi-upload"></i></span></td>';
@@ -1092,7 +1092,7 @@ function society_page_function(event) {
 						From <span style="color: #1f5eff; font-weight: 600;">${db.sender_name}</span>
 						<div style="margin-top: -5px;">Withdrawn</div>
 					</td>`;
-			amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} EUR</span> </td>`;
+			amount = `<td class="align-middle" style="font-weight: 500;"><span style="float: right;"> - ${db.value.toLocaleString()} GB</span> </td>`;
 		}
 
 		row += `
